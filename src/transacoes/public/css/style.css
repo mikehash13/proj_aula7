@@ -1,0 +1,197 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f9;
+    color: #172033;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #061555;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+main {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    font-size: 19px;
+    color: #061555;
+    margin-bottom: 18px;
+}
+
+.metricas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.metricas article {
+    background-color: #f1f4f9;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.metricas h3 {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.metricas p {
+    font-size: 21px;
+    font-weight: bold;
+    color: #061555;
+}
+
+#cardImpulso {
+    background-color: #fff0f0;
+}
+
+#cardImpulso p {
+    color: #dc2626;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #9aa9df;
+    border-color: #061555;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    border: none;
+    background-color: #061555;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #10277a;
+}
+
+#listaTransacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.transacao {
+    padding: 14px;
+    background-color: #f1f4f9;
+    border-radius: 10px;
+    border-left: 4px solid #061555;
+}
+
+.transacao.receita {
+    border-left-color: #16a34a;
+}
+
+.transacao.despesa {
+    border-left-color: #dc2626;
+}
+
+.transacao h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.transacao p {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+@media (min-width: 600px) {
+    .metricas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+#listaTransacoes .transacao button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+#cancelarEdicao {
+    background-color: #64748b;
+}
+
+#cancelarEdicao:hover {
+    background-color: #475569;
+}
+
+#cancelarEdicao[hidden] {
+    display: none;
+}

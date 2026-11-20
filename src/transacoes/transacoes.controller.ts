@@ -1,4 +1,13 @@
-import { Controller, Post, Get, Body } from '@nestjs/common';
+
+import {
+  Controller,
+  Post,
+  Get,
+  Patch,
+  Body,
+  Param,
+} from '@nestjs/common';
+
 import { TransacoesService } from './transacoes.service';
 import { Transacao } from './schemas/transacao.schema';
 
@@ -14,5 +23,13 @@ export class TransacoesController {
   @Get()
   listar() {
     return this.transacoesService.listar();
+  }
+
+  @Patch(':id')
+  atualizar(
+    @Param('id') id: string,
+    @Body() dados: Transacao,
+  ) {
+    return this.transacoesService.atualizar(id, dados);
   }
 }
